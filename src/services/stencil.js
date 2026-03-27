@@ -1,0 +1,3 @@
+export function processStencil(imageData) { try { return { success: true, processed: imageData, timestamp: new Date().toISOString() }; } catch (error) { console.error('Stencil processing error:', error); throw error; } }
+
+export function validateStencil(stencil) { try { if (!stencil || !stencil.image) { return false; } return true; } catch (error) { console.error('Stencil validation error:', error); return false; } }
